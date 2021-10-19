@@ -67,11 +67,11 @@ def compare():
 if not compare():
     with open('marks.json', 'w') as f:
         json.dump(marks, f)
-requests.post(f"http://{ip_address}/add",
-              json=marks,
-              params={
-                  "username": "SeleniumMarks",
-                  "api-key": api_key,
-                  "subject": "New Marks"
-              })
-print("New marks added.")
+    requests.post(f"http://{ip_address}/add",
+                  json=marks,
+                  params={
+                      "username": "SeleniumMarks",
+                      "api-key": api_key,
+                      "subject": "New Marks"
+                  })
+    print("New marks added.")
